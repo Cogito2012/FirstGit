@@ -21,4 +21,18 @@
 然后在Github网页端可以看到推送结果。
 
 其它基本操作：
+克隆：
     git clone git@github.com:YourGithubName/MyProject.git
+忽略：
+    touch .gitignore
+    此时文件夹下形成一个无名文件，双击打开，填入忽略项：
+        # ignore data files
+        data/
+        # ignore all C/C++ files
+        *.c
+        *.cpp
+        # ignore the file named 'main'
+        main
+    保存关闭，输入命令：
+    
+    
