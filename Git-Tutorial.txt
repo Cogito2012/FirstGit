@@ -1,0 +1,24 @@
+
+前提条件，安装好了Git，在Github上注册有账号，并且已有ssh密钥
+将本地文件夹MyProject作为一个github开源项目方法：
+
+1、创建Git仓库。在MyProject下，右键->Git Bash，输入：
+    git init
+即可将MyProject变为一个git仓库
+2、选择纳入版本控制的文件。输入：
+    git add .
+即可将MyProject下所有内容加入到git
+3、提交到Git。输入：
+    git commit -m 'initial commit'
+此时MyProject内容只是保存在本地git
+
+4、添加到Github远程仓库。登陆Github，创建一个仓库（Repositories），同名为MyProject
+本地MyProject目录下输入Git Bash命令：
+    git remote add origin git@github.com:YourGithubName/MyProject.git
+即可建立与远程仓库的连接。
+5、本地文件推送到远程Repositories。输入：
+    git push -u origin master
+然后在Github网页端可以看到推送结果。
+
+其它基本操作：
+    git clone git@github.com:YourGithubName/MyProject.git
