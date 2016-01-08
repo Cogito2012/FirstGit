@@ -33,7 +33,16 @@
         *.cpp
         # ignore the file named 'main'
         main
-    保存关闭，输入命令：
+    vim打开文件：
+        vim .gitignore
+    进入输入状态：
+        i
+    退出输入状态进入命令状态
+        Esc 
+    保存：
+        :w  # 保存输入
+    关闭：
+        :q  # 退出vim
 
 删除：
     如下，我把src里的全部移除，但是本地文件还保留。
