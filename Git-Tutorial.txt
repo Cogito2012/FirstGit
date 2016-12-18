@@ -50,4 +50,24 @@
         git rm -r --cached  */src/\*      //最终执行命令.
         git commit -m "remove version control of all files below src "    //提交
         git push origin master   //提交到远程服务器
+        
+本地改动文件后，更新远程（“本地仓库”比“远程仓库”新）
+    git add .
+    git add --update .
+    git commit -am "changed xxx file"
+    git push -u origin master
+    
+用远程仓库覆盖本地文件（“本地仓库”比“远程仓库”旧）
+方法一（推荐用）：
+    # 从远程仓库下载到本地某分支
+    git fetch origin master
+    # 查看远程仓库更新的内容，回车继续查看，输入“q”结束查看
+    git log -p master.. origin/master
+    # 如果决定要合并，用merge合并到本地
+    git merge origin/master
+方法二：
+    git pull origin master
+    (相当于git fetch和git merge)
+
+    
     
